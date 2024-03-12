@@ -19,35 +19,57 @@ The objective of this lab is build a home SOC Analyst Lab. This Lab consistt of.
 - <b>Blocking an attack</b>
 - <b>Trigger YARA scans with a detection rule</b>
 
-<h2>Program walk-through:</h2>
+
+<h2>Project Overview </h2>
+
+- <b>Setting Up Virtual Environment</b>
 
 <p align="center">
-Launch the utilityTESTMODE!!!!!: <br/>
-<img src="https://i.imgur.com/JzOlKxG.png"/>
+1. Download and installed VMWare workstation ISO <br/>
+3. Downloaded Windows VM and Ubuntu Server installer ISO<br/>
+3. Deploy Windows VM and Ubuntu Server <br/>
+ 
+<img src="https://i.imgur.com/RL488LP.png"/>
+
+-----------------------------------------------
+<img src="https://i.imgur.com/UU0fo2L.png"/>
+
+-----------------------------------------------
+
+<img src="https://i.imgur.com/fUzrk4j.png"/>
+
+<br />
+
+<p align="center">
+A. Set up static IP for VM Workstation so that it doesn’t change throughout the lab or beyond it by copying down Subnet IP and Gateway IP.<br />
+ 
+<img src="https://i.imgur.com/MS9u42c.png"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+4. In the Ubuntu installer change the interface from DHCPv4 to Manual and paste subnet IP and Gateway IP: <br/>
+<img src="https://i.imgur.com/3qmrxHh.png"/>
+<img src="https://i.imgur.com/UJI8rMh.png"/>
+<img src="https://i.imgur.com/BZXR2GI.png"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+5. Confirm connection after installation is complete <br/>
+<img src="https://i.imgur.com/hpQPz8b.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/xXYvEVR.png"/>
 <br />
 <br />
 Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src=""/>
 <br />
 <br />
 Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src=""/>
 <br />
 <br />
 Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src=""/>
 </p>
 
 <!--
