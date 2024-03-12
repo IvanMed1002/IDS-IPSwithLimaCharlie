@@ -40,16 +40,32 @@ The objective of this lab is build a home SOC Analyst Lab. This Lab consistt of.
 
 <br />
 
+-----------------------------------------------
+
 <p align="center">
 A. Set up static IP for VM Workstation so that it doesn’t change throughout the lab or beyond it by copying down Subnet IP and Gateway IP.<br />
  
 <img src="https://i.imgur.com/MS9u42c.png"/>
 <br />
 <br />
+
+-----------------------------------------------
+
 4. In the Ubuntu installer change the interface from DHCPv4 to Manual and paste subnet IP and Gateway IP: <br/>
 <img src="https://i.imgur.com/3qmrxHh.png"/>
+
+-----------------------------------------------
+
+
 <img src="https://i.imgur.com/UJI8rMh.png"/>
+
+-----------------------------------------------
+
+
 <img src="https://i.imgur.com/BZXR2GI.png"/>
+
+-----------------------------------------------
+
 <br />
 <br />
 5. Confirm connection after installation is complete <br/>
