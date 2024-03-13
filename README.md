@@ -24,14 +24,14 @@ The objective of this lab is build a home SOC Analyst Lab. This Lab consistt of.
 
 - <b>Setting Up Virtual Environment</b>
 
-<p align="center">
-1. Download and installed VMWare workstation ISO <br/>
-3. Downloaded Windows VM and Ubuntu Server installer ISO<br/>
-3. Deploy Windows VM and Ubuntu Server <br/>
+1. Download and installed VMWare workstation ISO<br/>
+2. Downloaded Windows VM and Ubuntu Server installer ISO<br/>
+3. Deploy Windows VM and Ubuntu Server<br/>
  
 <img src="https://i.imgur.com/RL488LP.png"/>
 
 -----------------------------------------------
+
 <img src="https://i.imgur.com/UU0fo2L.png"/>
 
 -----------------------------------------------
@@ -39,11 +39,11 @@ The objective of this lab is build a home SOC Analyst Lab. This Lab consistt of.
 <img src="https://i.imgur.com/fUzrk4j.png"/>
 
 <br />
+<br />
 
 -----------------------------------------------
 
-<p align="center">
-A. Set up static IP for VM Workstation so that it doesn’t change throughout the lab or beyond it by copying down Subnet IP and Gateway IP.<br />
+A. Set up static IP for VM Workstation so that it doesn’t change throughout the lab or beyond it by copying down Subnet IP and Gateway IP.<br/>
  
 <img src="https://i.imgur.com/MS9u42c.png"/>
 <br />
@@ -76,7 +76,37 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 <img src="https://i.imgur.com/xXYvEVR.png"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
+
+----------------------------------------------
+
+
+- <b>Set Up Windows VM</b>
+
+1. Turn on Windows VM.It will automatically log you in as “user”.<br/>
+2. Disable Microsoft Defender in “Manager Settings” Under “Virus & threat protection settings” (this will avoid interference from defender during scans)<br/>
+3. Permanently Disable Defender via Group Policy Editor in cmd prompt as administrator.<br>
+4. Disable some services via the “Registry Editor”<br/>
+<img src="https://i.imgur.com/aAw83rZ.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/ryOojEx.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/uZNCHxw.png"/>
+
+
+----------------------------------------------
+
+
+<img src="https://i.imgur.com/zlO6kBt.png"/>
+
+
+
+
+
+<br />
 <img src=""/>
 <br />
 <br />
@@ -87,6 +117,8 @@ Sanitization complete:  <br/>
 Observe the wiped disk:  <br/>
 <img src=""/>
 </p>
+
+<p align="center">
 
 <!--
  ```diff
