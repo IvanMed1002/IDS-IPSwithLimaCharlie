@@ -134,11 +134,82 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 1.	Create a free LimaCharlie account and org after account is created.<br/>
 2. Once the org is created Add Sensor windows VM.<br/>
-3. Install sensor provided by LimaCharlie from the windows VM cmd propmt<br/>
+3. Install sensor from the windows VM cmd propmt<br/>
+
+
+----------------------------------------------
+
+<img src=""/>
+
+----------------------------------------------
+
+<img src=""/>
 
 
 
-<br />
+4. Configure LimaCharlie to send the Sysmon event logs alongside its own EDR telemetry.<br/>
+
+
+----------------------------------------------
+
+<img src=""/>
+
+----------------------------------------------
+
+
+- <b>Setup Attack System<b/>
+
+1.	Use host system to SSH into Linux VM.<br/>
+2.	Set up c2 server.<br/>
+3.	Downlaod and set up Sliver (a C2 framework by BishopFox).<br/>
+4.	Create a working directory to use in future steps.<br/>
+
+
+----------------------------------------------
+
+<img src=""/>
+
+----------------------------------------------
+
+<img src=""/>
+
+----------------------------------------------
+
+<img src=""/>
+
+----------------------------------------------
+
+<img src=""/>
+
+
+- <b>Generate C2 payload<b/>
+
+1.	Log into SSH from host machine.<br/>
+a.	Log in as root and launch Sliver server
+c.	Generate our first C2 session payload (within the Sliver shell above). Be sure to use your Linux VM’s IP address we statically set in Part 1.
+d.	Confirm implant configuration
+e.	Download the C2 payload from Linux VM to the Windows VM with python code to spin up web server
+f.	Launch Adminstrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM. WITH FOLLOWING COMMAND.
+g.	SNAPSHOT Windows VM before VM is infected by MALWARE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Sanitization complete:  <br/>
 <img src=""/>
 <br />
