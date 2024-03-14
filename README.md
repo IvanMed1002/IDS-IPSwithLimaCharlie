@@ -82,8 +82,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 - <b>Set Up Windows VM</b>
 
-1. Turn on Windows VM.It will automatically log you in as “user”.<br/>
-2. Disable Microsoft Defender in “Manager Settings” Under “Virus & threat protection settings” (this will avoid interference from defender during scans)<br/>
+1. Turn on Windows VM and disable Microsoft Defender in “Manager Settings” Under “Virus & threat protection settings” (this will avoid interference from defender during scans)<br/>
 3. Permanently Disable Defender via Group Policy Editor in cmd prompt as administrator.<br>
 4. Disable some services via the “Registry Editor”<br/>
 <img src="https://i.imgur.com/aAw83rZ.png"/>
@@ -103,12 +102,42 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 <img src="https://i.imgur.com/zlO6kBt.png"/>
 
 
+- <b>Prevent Windows VM From Going Into Standby</b>
+
+1.	From an administrative command prompt, let’s prevent the VM from going into sleep/standby mode during lab.
 
 
+----------------------------------------------
 
-<br />
 <img src=""/>
-<br />
+
+----------------------------------------------
+
+- <b>Install Sysmon in Windows VM<b/>
+1.	Launch administrative PowerShell console.<br/>
+2.	Download Sysmon and SwiftOnSecurity’s Sysmon config.<br/>
+4.	Downloaded and install Sysmon with Swift’s config.<br/>
+5.	Validate Sysmon64 service is installed and running.<br/>
+6.	Check for the presence of Sysmon Event Logs.<br/>
+
+
+----------------------------------------------
+
+<img src=""/>
+
+----------------------------------------------
+
+<img src=""/>
+
+
+- <b>Install LimaCharlie EDR on Windows VM<b/>
+
+1.	Create a free LimaCharlie account and org after account is created.<br/>
+2. Once the org is created Add Sensor windows VM.<br/>
+3. Install sensor provided by LimaCharlie from the windows VM cmd propmt<br/>
+
+
+
 <br />
 Sanitization complete:  <br/>
 <img src=""/>
