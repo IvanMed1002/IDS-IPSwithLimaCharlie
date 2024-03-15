@@ -219,9 +219,17 @@ g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 7. Get basic info about the session<br/>
 
 
+----------------------------------------------
 
+<img src="https://i.imgur.com/IOPUoTy.png"/>
 
+----------------------------------------------
 
+<img src="https://i.imgur.com/jACWKqL.png"/>
+
+----------------------------------------------
+
+https://i.imgur.com/IOPUoTy.png
 
 
 
