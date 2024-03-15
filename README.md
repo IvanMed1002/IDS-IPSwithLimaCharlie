@@ -264,7 +264,54 @@ E. This is how attackers become aware of what security products a victim system 
 
 
 
-- <b>Observe EDR Telemetry So Far<b/>
+- <b>Observe EDR Telemetry<b/>
+
+1. Switch to LimaCharlie UI and check out some basic features.<br/>
+  a. “Sensors”,  “Processes”, and NOT signed and ACTIVE on network.<br/>
+2.Browse to the location to find implant (C:\Users\User\Downloads).<br/>
+3. Inspect the hash of the suspicious executable by scanning it with VirusTotal.<br/>
+4. Check “Timeline” on the left-side menu of our sensor to show real-time view of EDR telemetry + event logs streaming from this system.<br/>
+ a. Practice filtering timeline with known IOCs (indicators of compromise) such as the name of your implant.<br/>
+
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/oBGcJEh.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/gjHxyPk.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/eIWVCVu.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/gVtSBgk.png"/>
+
+----------------------------------------------
+
+- <b>Let’s Get Adversarial<b/>
+
+1. Get back onto an SSH session on the Linux VM, and drop into a C2 session on your victim.<br/>
+2. Adversaries love to steal credentials on a system using dump the lsass.exe process from memory.<br/>
+(This will dump the remote process from memory, and save it locally on your Sliver C2 server)<br/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/ygGM30D.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/navUFfe.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/HWsaWcL.png"/>
+
+
+- <b>Let’s Get Adversarial<b/>
 
 ----------------------------------------------
 
@@ -275,6 +322,10 @@ E. This is how attackers become aware of what security products a victim system 
 <img src=""/>
 
 ----------------------------------------------
+
+<img src=""/>
+
+
 
 
 Sanitization complete:  <br/>
