@@ -180,40 +180,38 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/OwdtVh4.png"/>
 
 ----------------------------------------------
-
-<img src=""/>
-
-----------------------------------------------
-
-<img src=""/>
-
-----------------------------------------------
-
-<img src=""/>
-
 
 - <b>Generate C2 payload<b/>
 
 1.	Log into SSH from host machine.<br/>
-a.	Log in as root and launch Sliver server
-c.	Generate our first C2 session payload (within the Sliver shell above). Be sure to use your Linux VM’s IP address we statically set in Part 1.
-d.	Confirm implant configuration
-e.	Download the C2 payload from Linux VM to the Windows VM with python code to spin up web server
-f.	Launch Adminstrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM. WITH FOLLOWING COMMAND.
-g.	SNAPSHOT Windows VM before VM is infected by MALWARE.
+a.	Log in as root and launch Sliver server.<br/>
+c.	Generate our first C2 session payload (within the Sliver shell above). Be sure to use your Linux VM’s IP address we statically set in Part 1..<br/>
+d.	Confirm implant configuration.<br/>
+e.	Download the C2 payload from Linux VM to the Windows VM with python code to spin up web server.<br/>
+f.	Launch Adminstrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM. WITH FOLLOWING COMMAND.<br/>
+g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
+
+<img src="https://i.imgur.com/bgQYeTg.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/BSpq1E8.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/1xu6iRK.png"/>
 
 
+----------------------------------------------
 
+<img src="https://i.imgur.com/DtM69qB.png"/>
 
+----------------------------------------------
 
-
-
-
-
-
+<img src=""/>
 
 
 
