@@ -173,10 +173,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 - <b>Setup Attack System<b/>
 
 1.	Use host system to SSH into Linux VM.<br/>
-2.	Set up c2 server.<br/>
-3.	Downlaod and set up Sliver (a C2 framework by BishopFox).<br/>
-4.	Create a working directory to use in future steps.<br/>
-
+2.	Downlaod and set up Sliver (a C2 framework by BishopFox).<br/>
 
 ----------------------------------------------
 
