@@ -109,7 +109,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/wqkhrIq.png"/>
 
 ----------------------------------------------
 
