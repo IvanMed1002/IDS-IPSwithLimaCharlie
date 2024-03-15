@@ -201,14 +201,19 @@ g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 
 <img src="https://i.imgur.com/1xu6iRK.png"/>
 
-
 ----------------------------------------------
 
 <img src="https://i.imgur.com/DtM69qB.png"/>
 
 ----------------------------------------------
 
-<img src=""/>
+
+- <b>Start Command and Control Session<b/>
+
+
+
+
+
 
 
 
