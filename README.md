@@ -210,6 +210,13 @@ g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 
 - <b>Start Command and Control Session<b/>
 
+1. Start SSH session on LINUX VM and enable the Sliver HTTP server to catch the callback.<br/>
+2. On Windows VM, use PowerShell as Administrator to execute the C2 payload from download location.<br/>
+3. Within a few moments, you should see your session check in on the Sliver server.<br/>
+4. Verify your session in Sliver.<br/>
+5. To connect to running session with C2 session use following command.<br/>
+6. You are now interacting directly with the C2 session on the Windows VM. Let’s run a few basic commands to get our bearing on the victim host.<br/> 
+7. Get basic info about the session<br/>
 
 
 
