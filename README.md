@@ -116,18 +116,20 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 - <b>Install Sysmon in Windows VM<b/>
 1.	Launch administrative PowerShell console.<br/>
 2.	Download Sysmon and SwiftOnSecurity’s Sysmon config.<br/>
-4.	Downloaded and install Sysmon with Swift’s config.<br/>
+4.	Install Sysmon with Swift’s config.<br/>
 5.	Validate Sysmon64 service is installed and running.<br/>
 6.	Check for the presence of Sysmon Event Logs.<br/>
 
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/2JY0ay3.png"/>
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/vEnZwQL.png"/>
+
+----------------------------------------------
 
 
 - <b>Install LimaCharlie EDR on Windows VM<b/>
@@ -139,12 +141,19 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/adCdqWG.png"/>
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/yVaKEcD.png"/>
 
+----------------------------------------------
+
+<img src="https://i.imgur.com/rbK8mng.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/xmpkwGh.png"/>
 
 
 4. Configure LimaCharlie to send the Sysmon event logs alongside its own EDR telemetry.<br/>
