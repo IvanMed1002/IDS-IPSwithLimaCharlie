@@ -60,8 +60,6 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 ----------------------------------------------
 
 <img src="https://i.imgur.com/xXYvEVR.png"/>
-<br />
-<br />
 
 ----------------------------------------------
 
@@ -69,10 +67,8 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 - <b>Set Up Windows VM</b>
 
 1. Turn on Windows VM and disable Microsoft Defender in “Manager Settings” Under “Virus & threat protection settings” (this will avoid interference from defender during scans).<br/>
-3. Permanently Disable Defender via Group Policy Editor in cmd prompt as administrator.<br>
-4. Disable some services via the “Registry Editor”.<br/>
-
------------------------------------------------
+2. Permanently Disable Defender via Group Policy Editor in cmd prompt as administrator.<br>
+3. Disable some services via the “Registry Editor”.<br/>
 
 <img src="https://i.imgur.com/aAw83rZ.png"/>
 
@@ -94,21 +90,17 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 1.	From an administrative command prompt, let’s prevent the VM from going into sleep/standby mode during lab.<br/>
 
-----------------------------------------------
-
 <img src="https://i.imgur.com/wqkhrIq.png"/>
 
 ----------------------------------------------
 
 - <b>Install Sysmon in Windows VM<b/>
+
 1.	Launch administrative PowerShell console.<br/>
 2.	Download Sysmon and SwiftOnSecurity’s Sysmon config.<br/>
-4.	Install Sysmon with Swift’s config.<br/>
-5.	Validate Sysmon64 service is installed and running.<br/>
-6.	Check for the presence of Sysmon Event Logs.<br/>
-
-
-----------------------------------------------
+3.	Install Sysmon with Swift’s config.<br/>
+4.	Validate Sysmon64 service is installed and running.<br/>
+5.	Check for the presence of Sysmon Event Logs.<br/>
 
 <img src="https://i.imgur.com/2JY0ay3.png"/>
 
@@ -125,8 +117,6 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 2. Once the org is created Add Sensor windows VM.<br/>
 3. Install sensor from the windows VM cmd propmt.<br/>
 
-
-----------------------------------------------
 
 <img src="https://i.imgur.com/adCdqWG.png"/>
 
@@ -146,8 +136,6 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 4. Configure LimaCharlie to send the Sysmon event logs alongside its own EDR telemetry.<br/>
 
 
-----------------------------------------------
-
 <img src="https://i.imgur.com/6rXTtco.png"/>
 
 ----------------------------------------------
@@ -156,13 +144,10 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 ----------------------------------------------
 
-
 - <b>Setup Attack System<b/>
 
 1.	Use host system to SSH into Linux VM.<br/>
-2.	Downlaod and set up Sliver (a C2 framework by BishopFox).<br/>
-
-----------------------------------------------
+2.	Downlaod and set up Sliver (a C2 framework).<br/>
 
 <img src="https://i.imgur.com/OwdtVh4.png"/>
 
@@ -205,9 +190,6 @@ g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 6. You are now interacting directly with the C2 session on the Windows VM. Let’s run a few basic commands to get our bearing on the victim host.<br/> 
 7. Get basic info about the session<br/>
 
-
-----------------------------------------------
-
 <img src="https://i.imgur.com/IOPUoTy.png"/>
 
 ----------------------------------------------
@@ -229,9 +211,6 @@ d. Identify running processes on the remote system.<br/>
 Notice that Sliver cleverly highlights its own process in green and any detected countermeasures (defensive tools) in red.<br/>
 E. This is how attackers become aware of what security products a victim system may be using.<br/>
 
-
-----------------------------------------------
-
 <img src="https://i.imgur.com/Z2hOhct.png"/>
 
 ----------------------------------------------
@@ -248,9 +227,6 @@ E. This is how attackers become aware of what security products a victim system 
 
 ----------------------------------------------
 
-
-
-
 - <b>Observe EDR Telemetry<b/>
 
 1. Switch to LimaCharlie UI and check out some basic features.<br/>
@@ -259,9 +235,6 @@ E. This is how attackers become aware of what security products a victim system 
 3. Inspect the hash of the suspicious executable by scanning it with VirusTotal.<br/>
 4. Check “Timeline” on the left-side menu of our sensor to show real-time view of EDR telemetry + event logs streaming from this system.<br/>
  a. Practice filtering timeline with known IOCs (indicators of compromise) such as the name of your implant.<br/>
-
-
-----------------------------------------------
 
 <img src="https://i.imgur.com/oBGcJEh.png"/>
 
@@ -285,8 +258,6 @@ E. This is how attackers become aware of what security products a victim system 
 2. Adversaries love to steal credentials on a system using dump the lsass.exe process from memory.<br/>
 (This will dump the remote process from memory, and save it locally on your Sliver C2 server).<br/>
 
-----------------------------------------------
-
 <img src="https://i.imgur.com/ygGM30D.png"/>
 
 ----------------------------------------------
@@ -301,7 +272,6 @@ E. This is how attackers become aware of what security products a victim system 
 
 - <b>Detect Adversarial Telemetry<b/>
 
-
 1. Switch over to LimaCharlie to find the relevant telemetry.<br/>
    a. Look for “SENSITIVE_PROCESS_ACCESS” to see how events look like when credential access occurred. This will
       help me build a detection & response rule that will alert me whenever the activity occurs.<br/>
@@ -309,9 +279,6 @@ E. This is how attackers become aware of what security products a victim system 
       events where the victim or target process ends with lsass.exe.<br/>
    c. In the “Respond” section, I removed all content and replace with the following content.
       Test rule against event built for it.<br/>
-
-
-----------------------------------------------
 
 <img src="https://i.imgur.com/f9imYcq.png"/>
 
@@ -327,13 +294,9 @@ E. This is how attackers become aware of what security products a victim system 
 
 - <b>Test Detection with Procdump<b/>
 
-
 1. Go back to Sliver server console in C2 session and rerun “procdump”.<br/>
 2. Back to LimaCharlie and click “detection” tab.<br/>
    a. Detection Signature will detect the raw event.<br/>
-
-
-----------------------------------------------
 
 <img src="https://i.imgur.com/UUGlj70.png"/>
 
@@ -353,8 +316,6 @@ E. This is how attackers become aware of what security products a victim system 
    responsible with deny_tree for the vssadmin delete shadows /all command.<br/>
 
 
-----------------------------------------------
-
 <img src="https://i.imgur.com/lWmJFgb.png"/>
 
 ----------------------------------------------
@@ -367,17 +328,12 @@ E. This is how attackers become aware of what security products a victim system 
 
 ----------------------------------------------
 
-
-
 - <b>BLOCK ATTACK!!<b/>
 
-
 1. Return to Sliver C2 session, and rerun the command to delete volume shadows.<br/>
-2.Action of running the command is what will trigger our D&R rule.<br/>
+2. Action of running the command is what will trigger our D&R rule.<br/>
 3. Test if D&R rule properly terminated the parent process, check to see if you still have an active system shell by rerunning the following "whoami" command.<br/>
 4. If our D&R rule worked successfully, the system shell will hang and fail to return anything from the whomai command, because the parent process was terminated.<br/>
-
-----------------------------------------------
 
 <img src="https://i.imgur.com/b0bUY7q.png"/>
 
