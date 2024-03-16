@@ -1,4 +1,4 @@
-<h1>GITHUB TESTMODE!!!!IDS-IPS with LimaCharlie</h1>
+<h1>EDR with LimaCharlie</h1>
 
 <h2>Description</h2>
 The objective of this lab is build a home SOC Analyst Lab. This Lab consistt of.............
