@@ -23,7 +23,7 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 - <b>Setting Up Virtual Environment</b>
 
 1. Download and installed VMWare workstation ISO<br/>
-2. Downloaded Windows VM and Ubuntu Server installer ISO<br/>
+2. Downloaded Windows VM and Ubuntu Server ISO<br/>
 3. Deploy Windows VM and Ubuntu Server<br/>
  
 <img src="https://i.imgur.com/RL488LP.png"/>
