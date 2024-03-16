@@ -340,9 +340,9 @@ E. This is how attackers become aware of what security products a victim system 
 - <b>Test Detection with Procdump<b/>
 
 
-1. Go back to Sliver server console in C2 session and rerun “procdump”.
-2. Back to LimaCharlie and click “detection” tab.
-   a. Detection Signature will detect the raw event.
+1. Go back to Sliver server console in C2 session and rerun “procdump”.<br/>
+2. Back to LimaCharlie and click “detection” tab.<br/>
+   a. Detection Signature will detect the raw event.<br/>
 
 
 ----------------------------------------------
@@ -360,16 +360,54 @@ E. This is how attackers become aware of what security products a victim system 
 ----------------------------------------------
 
 - <b>Detect and Prevent Threat on Windows System<b/>
+1. Back onto SSH session on the Linux VM and drop into a C2 session on victim machine.<br/>
+2. Browse over to LimaCharlie’s detection tab to see if default Sigma rules picked up on our shenanigans.<br/>
+3. From this D&R rule template, I created a response action that will take place when this activity takes place.<br/>
+   The “action: report” section simply fires off a Detection report to the “Detections” tab<br/>
+   The “action: task” section is what is responsible for killing the parent process
+   responsible with deny_tree for the vssadmin delete shadows /all command.<br/>
+
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/lWmJFgb.png"/>
 
 ----------------------------------------------
 
-<img src=""/>
+<img src="https://i.imgur.com/01jBP2y.png"/>
 
 ----------------------------------------------
+
+<img src="https://i.imgur.com/98oj949.png"/>
+
+----------------------------------------------
+
+
+
+- <b>BLOCK ATTACK!!<b/>
+
+
+1. Return to Sliver C2 session, and rerun the command to delete volume shadows.<br/>
+2.Action of running the command is what will trigger our D&R rule.<br/>
+3. Test if D&R rule properly terminated the parent process, check to see if you still have an active system shell by rerunning the following "whoami" command.<br/>
+4. If our D&R rule worked successfully, the system shell will hang and fail to return anything from the whomai command, because the parent process was terminated.<br/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/lWmJFgb.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/LoHNbsu.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/TEpgK5r.png"/>
+
+
+!!!!!This is effective because in a real ransomware scenario, the parent process is likely the ransomware payload or lateral movement tool that would be terminated in this case!!!!<br/>
+
+
 
 
 
