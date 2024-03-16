@@ -1,8 +1,7 @@
 <h1>EDR with LimaCharlie</h1>
 
-<h2>Description</h2>
-The objective of this lab is build a home SOC Analyst Lab. This Lab consistt of.............
-<br />
+<h2>Lab Objective</h2>
+Build a victim machine by disabling Microsoft Defender to make the system vulnerable. Then compromised the victim machine with a C2 exploitation framework “sliver”. Set up LimaCharlie, an EDR (Endpoint Detection Response) and configure Sysmon on the victim machine. See victim get compromised in Lima Charlie and then write a detection & response rule to block attack.<br />
 
 
 <h2>Languages and Utilities Used</h2>
