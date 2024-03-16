@@ -1,7 +1,7 @@
 <h1>EDR with LimaCharlie</h1>
 
 <h2>Lab Objective</h2>
-Build a victim machine by disabling Microsoft Defender to make the system vulnerable. Then compromised the victim machine with a C2 exploitation framework “sliver”. Set up LimaCharlie, an EDR (Endpoint Detection Response) and configure Sysmon on the victim machine. See victim get compromised in Lima Charlie and then write a detection & response rule to block attack.<br />
+Build a victim machine by disabling Microsoft Defender to make the system vulnerable. Then compromised the victim machine with a C2 exploitation framework “SLIVER”. Set up LimaCharlie, an EDR (Endpoint Detection Response) and configure Sysmon on the victim machine. See victim get compromised in LimaCharlie and then write a detection & response rule to detectand BLOCK attack.<br />
 
 
 <h2>Languages and Utilities Used</h2>
@@ -11,7 +11,7 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b>
+- <b>Windows VM</b>
 - <b>Linux (Ubuntu)</b>
 - <b>LimaCharlie</b>
 - <b>Crate detections rule</b>
