@@ -394,7 +394,7 @@ E. This is how attackers become aware of what security products a victim system 
 
 ----------------------------------------------
 
-<img src="https://i.imgur.com/lWmJFgb.png"/>
+<img src="https://i.imgur.com/b0bUY7q.png"/>
 
 ----------------------------------------------
 
