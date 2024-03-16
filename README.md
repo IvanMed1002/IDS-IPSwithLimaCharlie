@@ -16,9 +16,9 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 
 - <b>Setting Up Virtual Environment</b>
 
-1. Download and installed VMWare workstation ISO<br/>
-2. Downloaded Windows VM and Ubuntu Server ISO<br/>
-3. Deploy Windows VM and Ubuntu Server on VMWare<br/>
+1. Download and installed VMWare workstation ISO.<br/>
+2. Downloaded Windows VM and Ubuntu Server ISO.<br/>
+3. Deploy Windows VM and Ubuntu Server on VMWare.<br/>
  
 <img src="https://i.imgur.com/RL488LP.png"/>
 
@@ -30,9 +30,6 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 
 <img src="https://i.imgur.com/fUzrk4j.png"/>
 
-<br />
-<br />
-
 -----------------------------------------------
 
 A. Set up static IP for VM Workstation so that it doesn’t change throughout the lab or beyond it by copying down Subnet IP and Gateway IP.<br/>
@@ -41,7 +38,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 -----------------------------------------------
 
-4. In the Ubuntu installer change the interface from DHCPv4 to Manual and paste subnet IP and Gateway IP<br/>
+4. In the Ubuntu installer change the interface from DHCPv4 to Manual and paste subnet IP and Gateway IP.<br/>
 
 <img src="https://i.imgur.com/3qmrxHh.png"/>
 
@@ -56,7 +53,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 -----------------------------------------------
 
-5. Confirm connection after installation is complete <br/>
+5. Confirm connection after installation is complete.<br/>
 
 <img src="https://i.imgur.com/hpQPz8b.png"/>
 
@@ -71,9 +68,11 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 - <b>Set Up Windows VM</b>
 
-1. Turn on Windows VM and disable Microsoft Defender in “Manager Settings” Under “Virus & threat protection settings” (this will avoid interference from defender during scans)<br/>
+1. Turn on Windows VM and disable Microsoft Defender in “Manager Settings” Under “Virus & threat protection settings” (this will avoid interference from defender during scans).<br/>
 3. Permanently Disable Defender via Group Policy Editor in cmd prompt as administrator.<br>
-4. Disable some services via the “Registry Editor”<br/>
+4. Disable some services via the “Registry Editor”.<br/>
+
+-----------------------------------------------
 
 <img src="https://i.imgur.com/aAw83rZ.png"/>
 
@@ -85,17 +84,15 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 <img src="https://i.imgur.com/uZNCHxw.png"/>
 
-
 ----------------------------------------------
-
 
 <img src="https://i.imgur.com/zlO6kBt.png"/>
 
+-----------------------------------------------
 
 - <b>Prevent VM From Going Into Standby</b>
 
-1.	From an administrative command prompt, let’s prevent the VM from going into sleep/standby mode during lab.
-
+1.	From an administrative command prompt, let’s prevent the VM from going into sleep/standby mode during lab.<br/>
 
 ----------------------------------------------
 
@@ -126,7 +123,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 1.	Create a free LimaCharlie account and org after account is created.<br/>
 2. Once the org is created Add Sensor windows VM.<br/>
-3. Install sensor from the windows VM cmd propmt<br/>
+3. Install sensor from the windows VM cmd propmt.<br/>
 
 
 ----------------------------------------------
@@ -175,7 +172,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 1.	Log into SSH from host machine.<br/>
 a.	Log in as root and launch Sliver server.<br/>
-c.	Generate our first C2 session payload (within the Sliver shell above). Be sure to use your Linux VM’s IP address we statically set in Part 1..<br/>
+c.	Generate our first C2 session payload (within the Sliver shell above). Be sure to use your Linux VM’s IP address we statically set in Part 1.<br/>
 d.	Confirm implant configuration.<br/>
 e.	Download the C2 payload from Linux VM to the Windows VM with python code to spin up web server.<br/>
 f.	Launch Adminstrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM. WITH FOLLOWING COMMAND.<br/>
@@ -224,12 +221,12 @@ g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 ----------------------------------------------
 
 8. Get basic info about the session.<br/>
-a. Find out what user your implant is running as, and learn it’s privileges.
+a. Find out what user your implant is running as, and learn it’s privileges.<br/>
 If your implant was properly run with Admin rights, you’ll notice we have a few privileges that make further attack activity much easier, such as “SeDebugPrivilege”.<br/>
-b. Identify our implant’s working directory<br/>
-c. Examine network connections occurring on the remote system<br/>
-d. Identify running processes on the remote system<br/>
-Notice that Sliver cleverly highlights its own process in green and any detected countermeasures (defensive tools) in red
+b. Identify our implant’s working directory.<br/>
+c. Examine network connections occurring on the remote system.<br/>
+d. Identify running processes on the remote system.<br/>
+Notice that Sliver cleverly highlights its own process in green and any detected countermeasures (defensive tools) in red.<br/>
 E. This is how attackers become aware of what security products a victim system may be using.<br/>
 
 
@@ -286,7 +283,7 @@ E. This is how attackers become aware of what security products a victim system 
 
 1. Get back onto an SSH session on the Linux VM, and drop into a C2 session on your victim.<br/>
 2. Adversaries love to steal credentials on a system using dump the lsass.exe process from memory.<br/>
-(This will dump the remote process from memory, and save it locally on your Sliver C2 server)<br/>
+(This will dump the remote process from memory, and save it locally on your Sliver C2 server).<br/>
 
 ----------------------------------------------
 
@@ -300,15 +297,16 @@ E. This is how attackers become aware of what security products a victim system 
 
 <img src="https://i.imgur.com/HWsaWcL.png"/>
 
+----------------------------------------------
 
 - <b>Detect Adversarial Telemetry<b/>
 
 
-1. Switch over to LimaCharlie to find the relevant telemetry<br/>
+1. Switch over to LimaCharlie to find the relevant telemetry.<br/>
    a. Look for “SENSITIVE_PROCESS_ACCESS” to see how events look like when credential access occurred. This will
       help me build a detection & response rule that will alert me whenever the activity occurs.<br/>
    b. This rule will tell LimaCharlie to generate a detection report that will only look at SENSITIVE_PROCESS_ACCESS
-      events where the victim or target process ends with lsass.exe<br/>
+      events where the victim or target process ends with lsass.exe.<br/>
    c. In the “Respond” section, I removed all content and replace with the following content.
       Test rule against event built for it.<br/>
 
@@ -345,16 +343,13 @@ E. This is how attackers become aware of what security products a victim system 
 
 ----------------------------------------------
 
-<img src=""/>
-
-----------------------------------------------
-
 - <b>Detect and Prevent Threat on Windows System<b/>
+
 1. Back onto SSH session on the Linux VM and drop into a C2 session on victim machine.<br/>
 2. Browse over to LimaCharlie’s detection tab to see if default Sigma rules picked up on our shenanigans.<br/>
 3. From this D&R rule template, I created a response action that will take place when this activity takes place.<br/>
    The “action: report” section simply fires off a Detection report to the “Detections” tab<br/>
-   The “action: task” section is what is responsible for killing the parent process
+   The “action: task” section is what is responsible for killing the parent process.<br/>
    responsible with deny_tree for the vssadmin delete shadows /all command.<br/>
 
 
@@ -396,19 +391,6 @@ E. This is how attackers become aware of what security products a victim system 
 
 
 !!!!!This is effective because in a real ransomware scenario, the parent process is likely the ransomware payload or lateral movement tool that would be terminated in this case!!!!<br/>
-
-
-
-
-
-
-Sanitization complete:  <br/>
-<img src=""/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src=""/>
-</p>
 
 <p align="center">
 
