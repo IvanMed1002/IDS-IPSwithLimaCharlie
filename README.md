@@ -98,7 +98,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 <img src="https://i.imgur.com/zlO6kBt.png"/>
 
 
-- <b>Prevent Windows VM From Going Into Standby</b>
+- <b>Prevent VM From Going Into Standby</b>
 
 1.	From an administrative command prompt, let’s prevent the VM from going into sleep/standby mode during lab.
 
