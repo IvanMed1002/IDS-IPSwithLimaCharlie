@@ -15,9 +15,8 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 - <b>Linux (Ubuntu)</b>
 - <b>LimaCharlie</b>
 - <b>Crate detections rule</b>
-- <b>Blocking an attack</b>
 - <b>Trigger YARA scans with a detection rule</b>
-
+- <b>Blocking an attack</b>
 
 <h2>Project Overview </h2>
 
