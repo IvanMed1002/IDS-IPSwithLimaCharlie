@@ -311,7 +311,55 @@ E. This is how attackers become aware of what security products a victim system 
 <img src="https://i.imgur.com/HWsaWcL.png"/>
 
 
-- <b>Let’s Get Adversarial<b/>
+- <b>Detect Adversarial Telemetry<b/>
+
+
+1. Switch over to LimaCharlie to find the relevant telemetry<br/>
+   a. Look for “SENSITIVE_PROCESS_ACCESS” to see how events look like when credential access occurred. This will
+      help me build a detection & response rule that will alert me whenever the activity occurs.<br/>
+   b. This rule will tell LimaCharlie to generate a detection report that will only look at SENSITIVE_PROCESS_ACCESS
+      events where the victim or target process ends with lsass.exe<br/>
+   c. In the “Respond” section, I removed all content and replace with the following content.
+      Test rule against event built for it.<br/>
+
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/f9imYcq.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/BY1RiCP.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/r1Ygp8k.png"/>
+
+----------------------------------------------
+
+- <b>Test Detection with Procdump<b/>
+
+
+1. Go back to Sliver server console in C2 session and rerun “procdump”.
+2. Back to LimaCharlie and click “detection” tab.
+   a. Detection Signature will detect the raw event.
+
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/UUGlj70.png"/>
+
+----------------------------------------------
+
+<img src="https://i.imgur.com/HIZ4pOM.png"/>
+
+----------------------------------------------
+
+<img src=""/>
+
+----------------------------------------------
+
+- <b>Detect and Prevent Threat on Windows System<b/>
 
 ----------------------------------------------
 
@@ -322,8 +370,6 @@ E. This is how attackers become aware of what security products a victim system 
 <img src=""/>
 
 ----------------------------------------------
-
-<img src=""/>
 
 
 
