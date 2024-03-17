@@ -5,6 +5,7 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 
 <h2>Environments Used </h2>
 
+- <b>VMWare Workstation</b>
 - <b>Windows VM</b>
 - <b>Linux (Ubuntu)</b>
 - <b>LimaCharlie</b>
