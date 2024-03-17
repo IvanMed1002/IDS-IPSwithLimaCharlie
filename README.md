@@ -132,6 +132,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 <img src="https://i.imgur.com/xmpkwGh.png"/>
 
+----------------------------------------------
 
 4. Configure LimaCharlie to send the Sysmon event logs alongside its own EDR telemetry.<br/>
 
