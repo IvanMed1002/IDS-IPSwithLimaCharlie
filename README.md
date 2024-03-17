@@ -9,9 +9,9 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 - <b>Windows VM</b>
 - <b>Linux (Ubuntu)</b>
 - <b>LimaCharlie</b>
-- <b>Crate detections rule</b>
+- <b>Create detections rule</b>
 - <b>Trigger YARA scans with a detection rule</b>
-- <b>Blocking an attack</b>
+- <b>Block attack</b>
 
 <h2>Project Overview </h2>
 
