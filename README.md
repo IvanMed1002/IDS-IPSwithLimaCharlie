@@ -161,7 +161,7 @@ a.	Log in as root and launch Sliver server.<br/>
 c.	Generate our first C2 session payload (within the Sliver shell above). Use your Linux VM’s IP address that was statically set.<br/>
 d.	Confirm implant configuration.<br/>
 e.	Download the C2 payload from Linux VM to the Windows VM with python code to spin up web server.<br/>
-f.	Launch Adminstrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM. WITH FOLLOWING COMMAND.<br/>
+f.	Launch Adminstrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM.<br/>
 g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 
 <img src="https://i.imgur.com/bgQYeTg.png"/>
