@@ -187,9 +187,8 @@ g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 2. On Windows VM, use PowerShell as Administrator to execute the C2 payload from download location.<br/>
 3. Within a few moments, you should see your session check in on the Sliver server.<br/>
 4. Verify your session in Sliver.<br/>
-5. To connect to running session with C2 session use following command.<br/>
-6. You are now interacting directly with the C2 session on the Windows VM. Let’s run a few basic commands to get our bearing on the victim host.<br/> 
-7. Get basic info about the session<br/>
+5. You are now interacting directly with the C2 session on the Windows VM. Let’s run a few basic commands to get our bearing on the victim host.<br/> 
+6. Get basic info about the session<br/>
 
 <img src="https://i.imgur.com/IOPUoTy.png"/>
 
@@ -232,10 +231,10 @@ E. This is how attackers become aware of what security products a victim system 
 
 1. Switch to LimaCharlie UI and check out some basic features.<br/>
   a. “Sensors”,  “Processes”, and NOT signed and ACTIVE on network.<br/>
-2.Browse to the location to find implant (C:\Users\User\Downloads).<br/>
+2. Browse to the location to find implant (C:\Users\User\Downloads).<br/>
 3. Inspect the hash of the suspicious executable by scanning it with VirusTotal.<br/>
 4. Check “Timeline” on the left-side menu of our sensor to show real-time view of EDR telemetry + event logs streaming from this system.<br/>
- a. Practice filtering timeline with known IOCs (indicators of compromise) such as the name of your implant.<br/>
+  a. Practice filtering timeline with known IOCs (indicators of compromise) such as the name of your implant.<br/>
 
 <img src="https://i.imgur.com/oBGcJEh.png"/>
 
