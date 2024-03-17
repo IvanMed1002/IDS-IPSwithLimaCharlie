@@ -205,11 +205,9 @@ g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 8. Get basic info about the session.<br/>
 a. Find out what user your implant is running as, and learn it’s privileges.<br/>
 If your implant was properly run with Admin rights, you’ll notice we have a few privileges that make further attack activity much easier, such as “SeDebugPrivilege”.<br/>
-b. Identify our implant’s working directory.<br/>
-c. Examine network connections occurring on the remote system.<br/>
-d. Identify running processes on the remote system.<br/>
+b. Identify running processes on the remote system.<br/>
 Notice that Sliver cleverly highlights its own process in green and any detected countermeasures (defensive tools) in red.<br/>
-E. This is how attackers become aware of what security products a victim system may be using.<br/>
+c. This is how attackers become aware of what security products a victim system may be using.<br/>
 
 <img src="https://i.imgur.com/Z2hOhct.png"/>
 
