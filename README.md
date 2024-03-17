@@ -7,7 +7,7 @@ Build a victim machine by disabling Microsoft Defender to make the system vulner
 
 - <b>VMWare Workstation</b>
 - <b>Windows VM</b>
-- <b>Linux (Ubuntu)</b>
+- <b>Linux (Ubuntu Server)</b>
 - <b>LimaCharlie</b>
 - <b>Create detections rule</b>
 - <b>Trigger YARA scans with a detection rule</b>
