@@ -65,7 +65,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 ----------------------------------------------
 
 
-- <b>Set Up Windows VM</b>
+- <b>SetUp Windows VM</b>
 
 1. Turn on Windows VM and disable Microsoft Defender in “Manager Settings” Under “Virus & threat protection settings” (this will avoid interference from defender during scans).<br/>
 2. Permanently Disable Defender via Group Policy Editor in cmd prompt as administrator.<br>
@@ -116,7 +116,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 1.	Create a free LimaCharlie account and org after account is created.<br/>
 2. Once the org is created Add Sensor windows VM.<br/>
-3. Install sensor from the windows VM cmd propmt.<br/>
+3. Install sensor from the windows VM cmd prompt.<br/>
 
 
 <img src="https://i.imgur.com/adCdqWG.png"/>
@@ -148,7 +148,7 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 
 - <b>Setup Attack System<b/>
 
-1.	Downlaod and set up Sliver (a C2 framework).<br/>
+1.	Download and setup Sliver (a C2 framework).<br/>
 
 <img src="https://i.imgur.com/OwdtVh4.png"/>
 
@@ -157,11 +157,11 @@ A. Set up static IP for VM Workstation so that it doesn’t change throughout th
 - <b>Generate C2 payload<b/>
 
 1.	Log into SSH from host machine.<br/>
-a.	Log in as root and launch Sliver server.<br/>
+a.	Login as root and launch Sliver server.<br/>
 c.	Generate our first C2 session payload (within the Sliver shell above). Use your Linux VM’s IP address that was statically set.<br/>
 d.	Confirm implant configuration.<br/>
 e.	Download the C2 payload from Linux VM to the Windows VM with python code to spin up web server.<br/>
-f.	Launch Adminstrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM.<br/>
+f.	Launch Administrator PowerShell console on Windows VM to download C2 payload from the Linux Vm to the Windows VM.<br/>
 g.	SNAPSHOT Windows VM before VM is infected by MALWARE.<br/>
 
 <img src="https://i.imgur.com/bgQYeTg.png"/>
@@ -275,7 +275,7 @@ c. This is how attackers become aware of what security products a victim system 
       help me build a detection & response rule that will alert me whenever the activity occurs.<br/>
    b. This rule will tell LimaCharlie to generate a detection report that will only look at SENSITIVE_PROCESS_ACCESS
       events where the victim or target process ends with lsass.exe.<br/>
-   c. In the “Respond” section, I removed all content and replace with the following content.
+   c. In the “Respond” section, I removed all content and replace it with the following content.
       Test rule against event built for it.<br/>
 
 <img src="https://i.imgur.com/f9imYcq.png"/>
